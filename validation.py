@@ -28,3 +28,11 @@ def validateAmount(amount):
     if amount <= 0:
      invalidExpense("Amount must be greater")
     return amount
+
+def validateCategory(category):
+    category = category.strip().lower()
+
+    if category not in CATEGORIES:
+        invalidExpense("Invalid category!")
+
+    return category
